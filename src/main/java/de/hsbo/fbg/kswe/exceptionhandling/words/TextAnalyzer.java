@@ -11,7 +11,14 @@ public class TextAnalyzer {
     }
 
     public String findLongestWord(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String longest = "";
+        String[] array = text.split(" ");
+        for(String current:array){
+            if(current.length()>longest.length()){
+                longest=current;
+            }
+        }
+        return longest;
     }
 
 }
